@@ -472,7 +472,6 @@ body, input,textarea, a{
   letter-spacing: 0.5px;
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 0.5px;
-
 }
 .info-sub-title{
   font-size: 15px;
@@ -569,7 +568,7 @@ body, input,textarea, a{
   padding: 0px 30px;
   margin: 14px 12px;
   border-radius: 25px;
-  box-shadow: inset 8px 8px 8px #000000, inset -8px -8px 8px #590707;
+  box-shadow: inset 8px 8px 8px #000000, inset -8px -8px 8px #504c4c;
 }
 .form-fields .form-group:last-child {
   width: 96%;
