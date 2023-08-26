@@ -756,15 +756,11 @@
 
 
 <script>
+  
 
 // Function to handle screen rotation
 function handleScreenRotation() {
-if(window.innerWidth > 400){
-      document.getElementById('body').style.display="block"
-      document.getElementById('fevl-rotate').style.display="none"
-      return;
-}
-  if (window.innerWidth > window.innerHeight) {
+  if (window.screen.width - window.innerWidth > 50) {
     // Landscape orientation
       document.getElementById('body').style.display="none"
     document.getElementById('fevl-rotate').style.display="block"
@@ -779,8 +775,7 @@ if(window.innerWidth > 400){
 window.addEventListener("resize", handleScreenRotation);
 
 // Initial call to set the initial orientation
-handleScreenRotation();
-
+handleScreenRotation()
 </script>
   </body>
 </html>
