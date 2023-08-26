@@ -760,12 +760,7 @@
 
 // Function to handle screen rotation
 function handleScreenRotation() {
-if(window.innerHeight > 400){
-      document.getElementById('body').style.display="block"
-      document.getElementById('fevl-rotate').style.display="none"
-      return;
-}
-  if (window.innerWidth > window.innerHeight) {
+  if (window.screen.width - window.innerWidth > 50) {
     // Landscape orientation
       document.getElementById('body').style.display="none"
     document.getElementById('fevl-rotate').style.display="block"
