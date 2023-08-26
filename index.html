@@ -757,24 +757,30 @@
 
 <script>
   
-function checkOrientation() {
-    if (window.matchMedia("(orientation: portrait)").matches) {
-        // Portrait mode
+
+// Function to handle screen rotation
+function handleScreenRotation() {
+if(window.innerHeight > 400){
       document.getElementById('body').style.display="block"
       document.getElementById('fevl-rotate').style.display="none"
-    } else if (window.matchMedia("(orientation: landscape)").matches) {
-        // Landscape mode
+      return;
+}
+  if (window.innerWidth > window.innerHeight) {
+    // Landscape orientation
       document.getElementById('body').style.display="none"
-      document.getElementById('fevl-rotate').style.display="block"
-    }
+    document.getElementById('fevl-rotate').style.display="block"
+  } else {
+    // Portrait orientation
+      document.getElementById('body').style.display="block"
+    document.getElementById('fevl-rotate').style.display="none"
+  }
 }
 
-// Call the function initially and whenever the orientation changes
-checkOrientation();
+// Attach the event listener
+window.addEventListener("resize", handleScreenRotation);
 
-window.addEventListener('resize', function() {
-    checkOrientation();
-});
+// Initial call to set the initial orientation
+handleScreenRotation()
 </script>
   </body>
 </html>
